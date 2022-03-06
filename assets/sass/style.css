@@ -1,0 +1,488 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 10px;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  font-family: Montserrat, sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/h1-sl1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero header {
+  width: 100%;
+  height: 22vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero header .logo {
+  background-color: white;
+  height: 22vh;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero nav {
+  width: 60%;
+  height: 22vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero nav ul {
+  width: 60%;
+  height: 22vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.hero nav ul li {
+  cursor: pointer;
+  position: relative;
+}
+
+.hero nav ul li:hover {
+  color: #BAA08F;
+}
+
+.hero nav ul li a {
+  color: white;
+  font-size: 1.2rem;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.hero nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: 1.5rem;
+  width: 1.2px;
+  height: 26px;
+  background: #baa08f;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+}
+
+.hero .spans {
+  width: 20%;
+  height: 22vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.hero .spans .icon {
+  width: 40%;
+  height: 22vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.hero .spans .icon i {
+  font-size: 2.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.hero .spans .right {
+  width: 60%;
+  height: 22vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #BAA08F;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.hero .spans .right:hover .second {
+  width: 34px;
+}
+
+.hero .spans .right .spn {
+  position: relative;
+  left: 3rem;
+  width: 34px;
+  height: 2px;
+  background: #fff;
+  margin: 6px 0 0;
+}
+
+.hero .spans .right .second {
+  width: 21px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.slider {
+  width: 100%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.slider p {
+  color: white;
+  font-size: 4rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-left: 6rem;
+  position: absolute;
+  line-height: 5rem;
+}
+
+.slider .left {
+  margin-left: 2rem;
+  width: 22%;
+  height: 75vh;
+  border: 5px solid #BAA08F;
+}
+
+.slider .left h1 {
+  text-transform: uppercase;
+  color: #BAA08F;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+
+.slider .right {
+  margin-right: 3rem;
+  width: 5%;
+  height: 22vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.slider .right i {
+  color: #fff;
+}
+
+.slider .right .lft {
+  background-color: #BAA08F;
+  height: 49%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider .right .rght {
+  background-color: #BAA08F;
+  width: 100%;
+  height: 49%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features {
+  font-family: Montserrat,sans-serif;
+  width: 100%;
+  height: 135vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #FFFFFF;
+}
+
+.features .top {
+  width: 100%;
+  height: 45vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features .top h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.7rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  opacity: .8;
+}
+
+.features .top p {
+  line-height: 1.9rem;
+  font-size: 1.1rem;
+  opacity: .7;
+}
+
+.features .bottom {
+  width: 100%;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features .bottom .bottom-divs {
+  width: 91%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features .bottom .bottom-divs .item {
+  width: 30%;
+  height: 34vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 35px 10px;
+  margin-bottom: 1.3rem;
+  -webkit-box-shadow: 0px 0px 40px 0px #eee;
+          box-shadow: 0px 0px 40px 0px #eee;
+}
+
+.features .bottom .bottom-divs .item .service-icon {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features .bottom .bottom-divs .item .service-icon img {
+  background-color: white;
+}
+
+.features .bottom .bottom-divs .service-text {
+  width: 80%;
+  height: 100%;
+}
+
+.features .bottom .bottom-divs .service-text h1 {
+  color: #333333;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.features .bottom .bottom-divs .service-text p {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.features .bottom .bottom-divs .service-text .btn {
+  margin-top: 1.4rem;
+}
+
+.features .bottom .bottom-divs .service-text .btn a {
+  color: black;
+  font-weight: 600;
+}
+
+.btn {
+  position: relative;
+}
+
+.btn .more {
+  padding-left: 3rem;
+}
+
+.btn .more::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  background: #baa08f;
+  width: 40px;
+  height: 1px;
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
