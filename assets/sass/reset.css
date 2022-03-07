@@ -21,6 +21,8 @@ time, mark, audio, video {
   font-size: 10px;
   font: inherit;
   vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
