@@ -379,9 +379,83 @@
     height: 1px;
     display: block
 }
-
-
 // Projects
+.projects{
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    @include center;
+    flex-direction: column;
+    align-items: center;
+    .center{
+        width: 70%;
+        height: 85%;
+       background-image: url("../img/blog3.jpg");
+       background-position: center;
+       background-size: cover;
+    
+    //   .left-text{ 
+    //       position:relative;
+    //       background-color: black;
+    //       color: white;
+    //       transform: rotate(-90deg);
+    //       width: 100px;
+    //       height: 100px;
+    //       left: 0;
+    //       bottom: 0;
+    //   }
+    }
+    .blog-text{
+       position: absolute;
+       background-color:#F9F9F9;
+       width: 550px;
+       height: 400px;
+       bottom: 0;
+       right:5rem;
+       padding: 33px 40px;
+       h1{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-family: "Playfair Display", Sans-serif;
+      }
+      p{
+         line-height: 2rem;
+         font-size: 1.1rem;
+         font-family: Montserrat, sans-serif;
+         opacity: .7;
+      }
+    }
+    .bottom-icons{
+        width: 140px;
+        height:53px;
+        position:absolute;
+        bottom: 0;
+        right: 39.2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        .brown{
+            @include center;
+            width: 60px;
+            height: 53px;
+            background-color: #333333;
+            cursor: pointer;
+        }
+        .orange{
+            @include center;
+            width: 60px;
+            height: 53px;
+            background-color: #BAA08F;
+            cursor: pointer;
+        }
+        i{
+            color: white;
+            font-size: 1.7rem;
+        }
+    }
+}
 
 // Transformations
 .trans{
@@ -957,7 +1031,7 @@
      justify-content: center;
      align-items: center;
     .all-itemf{
-      width: 93%;
+      width: 90%;
       height: 40vh;
       @include center;
       flex-direction: row;

@@ -684,6 +684,116 @@ a {
   display: block;
 }
 
+.projects {
+  width: 100%;
+  height: 120vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+}
+
+.projects .center {
+  width: 70%;
+  height: 85%;
+  background-image: url("../img/blog3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.projects .blog-text {
+  position: absolute;
+  background-color: #F9F9F9;
+  width: 550px;
+  height: 400px;
+  bottom: 0;
+  right: 5rem;
+  padding: 33px 40px;
+}
+
+.projects .blog-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", Sans-serif;
+}
+
+.projects .blog-text p {
+  line-height: 2rem;
+  font-size: 1.1rem;
+  font-family: Montserrat, sans-serif;
+  opacity: .7;
+}
+
+.projects .bottom-icons {
+  width: 140px;
+  height: 53px;
+  position: absolute;
+  bottom: 0;
+  right: 39.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .bottom-icons .brown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 53px;
+  background-color: #333333;
+  cursor: pointer;
+}
+
+.projects .bottom-icons .orange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 53px;
+  background-color: #BAA08F;
+  cursor: pointer;
+}
+
+.projects .bottom-icons i {
+  color: white;
+  font-size: 1.7rem;
+}
+
 .trans {
   width: 100%;
   height: 134vh;
