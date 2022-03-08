@@ -383,6 +383,11 @@ a {
   margin-top: 1rem;
 }
 
+.solution .left-right .right-side .sbmt2 {
+  padding: 12px 14px;
+  margin-top: 1rem;
+}
+
 .solution .left-right .right-side .span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1718,7 +1723,7 @@ a {
 }
 
 .footer .footer-top .all-itemf {
-  width: 93%;
+  width: 90%;
   height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1936,5 +1941,180 @@ a {
   color: white;
   cursor: pointer;
   position: fixed;
+}
+
+.submit {
+  border: none;
+  color: black;
+  font-size: 1.2rem;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  font-weight: 700;
+  position: relative;
+}
+
+.submit::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 3px solid transparent;
+}
+
+.submit:hover::before {
+  /* animation: animate 1s linear forwards; */
+  -webkit-animation-name: animate;
+          animation-name: animate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.submit:hover::after {
+  /* animation: animate2 1s linear forwards; */
+  -webkit-animation-name: animate2;
+          animation-name: animate2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: black;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: black;
+    border-right-color: black;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: black;
+    border-right-color: black;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: black;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: black;
+    border-right-color: black;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: black;
+    border-right-color: black;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.submit::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 3px solid transparent;
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: black;
+  }
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: black;
+    border-left-color: black;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: black;
+    border-left-color: black;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: black;
+  }
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: black;
+    border-left-color: black;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: black;
+    border-left-color: black;
+  }
 }
 /*# sourceMappingURL=style.css.map */
