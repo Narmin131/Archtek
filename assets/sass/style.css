@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -135,17 +134,38 @@ a {
 .hero nav ul li {
   cursor: pointer;
   position: relative;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
-.hero nav ul li:hover {
+.hero nav ul li:hover .net {
   color: #BAA08F;
+  height: 30px;
+}
+
+.hero nav ul li .net {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  width: 1px;
+  height: 0;
+  background-color: #BAA08F;
+  position: absolute;
+  bottom: 90%;
+  left: 50%;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  margin-bottom: .3rem;
 }
 
 .hero nav ul li a {
   color: white;
   font-size: 1.2rem;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.hero nav ul li a:hover {
+  color: #BAA08F;
 }
 
 .hero .spans {
@@ -206,7 +226,7 @@ a {
 
 .hero .spans .right .spn {
   position: relative;
-  left: 3rem;
+  left: 3.5rem;
   width: 34px;
   height: 2px;
   background: #fff;
@@ -240,19 +260,20 @@ a {
 
 .slider p {
   color: white;
-  font-size: 4rem;
+  font-size: 4.6rem;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
-  margin-left: 6rem;
+  margin-left: 5rem;
   position: absolute;
+  z-index: 1;
   line-height: 5rem;
 }
 
 .slider .left {
   margin-left: 2rem;
-  width: 22%;
-  height: 75vh;
-  border: 5px solid #BAA08F;
+  width: 23%;
+  height: 73vh;
+  position: relative;
 }
 
 .slider .left h1 {
@@ -1671,6 +1692,7 @@ a {
   font-size: 1rem;
   font-family: Montserrat, sans-serif;
   border: none;
+  outline: none;
   -webkit-box-shadow: 0 0px 50px 0px #eee;
           box-shadow: 0 0px 50px 0px #eee;
   border-radius: 2px;
@@ -1683,6 +1705,7 @@ a {
   -webkit-box-shadow: 0 0px 50px 0px #eee;
           box-shadow: 0 0px 50px 0px #eee;
   font-size: 1rem;
+  outline: none;
   font-family: Montserrat, sans-serif;
   padding: 1rem 0  0 1rem;
 }
@@ -1765,10 +1788,16 @@ a {
   margin-top: 2rem;
 }
 
-.footer .footer-top .all-itemf .one .icns i {
+.footer .footer-top .all-itemf .one .icns a:hover i {
+  color: #BAA08F;
+}
+
+.footer .footer-top .all-itemf .one .icns a i {
   color: white;
   font-size: 1.2rem;
   margin-right: 1.7rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .footer .footer-top .all-itemf .two {
@@ -1819,6 +1848,12 @@ a {
   color: white;
   font-size: 1.2rem;
   margin-left: .8rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.footer .footer-top .all-itemf .two .second a:hover, .footer .footer-top .all-itemf .two .third a:hover {
+  color: #BAA08F;
 }
 
 .footer .footer-top .all-itemf .three {
@@ -1851,6 +1886,14 @@ a {
   color: white;
   margin-top: 1.7rem;
   font-family: Montserrat, sans-serif;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.footer .footer-top .all-itemf .three .text a:hover {
+  color: #BAA08F;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .footer .footer-top .all-itemf .four h1 {
@@ -2115,6 +2158,173 @@ a {
     border-right-color: transparent;
     border-bottom-color: black;
     border-left-color: black;
+  }
+}
+
+.submit2 {
+  border: none;
+  color: black;
+  font-size: 1.2rem;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  font-weight: 700;
+  position: relative;
+}
+
+.submit2::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 7px solid transparent;
+  -webkit-animation-name: animate3;
+          animation-name: animate3;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: #baa08f;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: #baa08f;
+    border-right-color: #baa08f;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: #baa08f;
+    border-right-color: #baa08f;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: #baa08f;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: #baa08f;
+    border-right-color: #baa08f;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: #baa08f;
+    border-right-color: #baa08f;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.submit2::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 7px solid transparent;
+  -webkit-animation-name: animate4;
+          animation-name: animate4;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #baa08f;
+  }
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #baa08f;
+    border-left-color: #baa08f;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #baa08f;
+    border-left-color: #baa08f;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #baa08f;
+  }
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #baa08f;
+    border-left-color: #baa08f;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #baa08f;
+    border-left-color: #baa08f;
   }
 }
 /*# sourceMappingURL=style.css.map */

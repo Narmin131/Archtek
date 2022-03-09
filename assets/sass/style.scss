@@ -1,10 +1,6 @@
 @import "reset";
 @import "mixin";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,700&display=swap');
-//  font-family: "Playfair Display", Sans-serif;
-
 // MAIN SECTION
-
 .hero{
     font-family:Montserrat, sans-serif;
     width: 100%;
@@ -36,14 +32,30 @@
               li{
                  cursor: pointer;
                  position: relative;
-                 &:hover {
+                 transition: all .4s ease;
+                 &:hover .net {
                     color: #BAA08F;
-              }
-
+                    height: 30px;
+                 }
+                    .net{
+                        transform: rotate(-90deg);
+                        width: 1px;
+                        height: 0;
+                        background-color: #BAA08F;
+                        position: absolute;
+                        bottom: 90%;
+                        left: 50%;
+                        transition: all .4s ease;
+                        margin-bottom: .3rem;
+                    }
+              
                   a{
                       color:white;
                       font-size: 1.2rem;
-                      transition: all .5s ease;
+                      transition: all .4s ease;
+                      &:hover{
+                          color: #BAA08F;
+                      }
                   }
               }
           }
@@ -78,7 +90,7 @@
              }
                .spn{
                  position: relative;
-                 left: 3rem;
+                 left: 3.5rem;
                width: 34px;
                height: 2px;
                background: #fff;
@@ -91,7 +103,7 @@
             }
          }
 }      
-        
+
 .slider{
     width: 100%;
     height: 80vh;
@@ -100,18 +112,19 @@
     position: relative;
     p{
         color: white;
-        font-size: 4rem;
+        font-size: 4.6rem;
         font-family: 'Times New Roman', Times, serif;
         font-weight: bold;
-        margin-left: 6rem;
+        margin-left: 5rem;
         position: absolute;
+        z-index: 1;
         line-height: 5rem;
     }
     .left{
         margin-left: 2rem;
-        width: 22%;
-        height: 75vh;
-        border: 5px solid #BAA08F;
+        width: 23%;
+        height: 73vh;
+        position: relative;
         h1{
             text-transform: uppercase;
             color: #BAA08F;
@@ -398,16 +411,7 @@
        background-position: center;
        background-size: cover;
     
-    //   .left-text{ 
-    //       position:relative;
-    //       background-color: black;
-    //       color: white;
-    //       transform: rotate(-90deg);
-    //       width: 100px;
-    //       height: 100px;
-    //       left: 0;
-    //       bottom: 0;
-    //   }
+  
     }
     .blog-text{
        position: absolute;
@@ -1001,6 +1005,7 @@
             font-size: 1rem;
             font-family: Montserrat, sans-serif;
             border: none;
+            outline: none       ;
             box-shadow: 0 0px 50px 0px #eee;
             border-radius: 2px;
         }
@@ -1010,6 +1015,7 @@
             border: none;
             box-shadow: 0 0px 50px 0px #eee;
             font-size: 1rem;
+            outline: none       ;
             font-family: Montserrat, sans-serif;
             padding: 1rem 0  0 1rem;
         }
@@ -1051,10 +1057,17 @@
         }
         .icns{
             margin-top: 2rem;
-            i{
-                color: white;
-                font-size: 1.2rem;
-                margin-right: 1.7rem;
+            a{
+                
+                &:hover i{
+                   color: #BAA08F;
+                }
+                i{
+                    color: white;
+                    font-size: 1.2rem;
+                    margin-right: 1.7rem;
+                    transition: all .3s;
+                }
             }
         }
     }
@@ -1089,7 +1102,11 @@
              color: white;
              font-size:1.2rem;
              margin-left: .8rem;
-            
+             transition: all .3s;
+             &:hover{
+                color: #BAA08F;
+
+            }
          }
      }
     }
@@ -1109,6 +1126,12 @@
           color: white;
           margin-top: 1.7rem;
           font-family: Montserrat, sans-serif;
+          transition: all .3s;
+          &:hover{
+             color: #BAA08F;
+             transition: all .4s;
+         }
+
          }
        }
      }
@@ -1186,11 +1209,13 @@
           color: white;
           cursor:pointer;       
           position: fixed;
+        
           
         }
     }   
 
    }
+  
  }
 
 
@@ -1296,5 +1321,107 @@
         border-right-color: transparent;
         border-bottom-color: rgb(0, 0, 0);
         border-left-color: rgb(0, 0, 0);
+    }
+}
+
+
+
+
+
+// SUbmit 2
+.submit2{
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+    background-color: transparent;
+    font-weight: 700;
+    position: relative;
+}
+.submit2::before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 7px solid transparent;
+    animation-name:animate3 ;
+     animation-duration: 3s;
+     animation-iteration-count: 1;
+     animation-fill-mode: both;
+     animation-timing-function: ease;
+     animation-direction: alternate;
+}
+@keyframes animate3 {
+    0%{
+        width: 0;
+        height: 0;
+        border-top-color: #baa08f;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50%{
+        width: 100%;
+        height: 0;
+        border-top-color: #baa08f;
+        border-right-color: #baa08f;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+        border-top-color: #baa08f;
+        border-right-color: #baa08f;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+.submit2::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 0;
+    height: 0;
+    background: transparent;
+   border: 7px solid transparent;
+   animation-name:animate4 ;
+       animation-duration: 3s;
+       animation-iteration-count: 1;
+       animation-fill-mode: forwards;
+       animation-timing-function: ease;
+        animation-direction: alternate;
+}
+@keyframes animate4 {
+    0%{
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #baa08f;
+    }
+    50%{
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #baa08f;
+        border-left-color: #baa08f;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #baa08f;
+        border-left-color: #baa08f;
     }
 }
